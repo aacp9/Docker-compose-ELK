@@ -1,6 +1,11 @@
 version: '3.7'
 # ELK: Elasticsearch - Logstash - Kibana
+# Servicios saparados que trabajan en conjunto:
+# Elasticsearch : genera índices a los datos recpilados
+# Logstash      : recopila datos 
+# Kibana        : muestra gráficamente los resultados 
 services:
+  #elasticsearch es el encargado de generar los inidices de los datos recopilados.
   elasticsearch:
     image: elasticsearch:7.9.2
     ports:
